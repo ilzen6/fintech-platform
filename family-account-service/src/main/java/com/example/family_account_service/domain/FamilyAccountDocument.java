@@ -10,6 +10,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.annotation.Version;
 import org.springframework.data.mongodb.core.index.CompoundIndex;
 import org.springframework.data.mongodb.core.index.CompoundIndexes;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.FieldType;
@@ -33,6 +34,7 @@ public class FamilyAccountDocument {
     @Id
     private String id;
 
+    @Indexed(unique = true, background = true)
     private String ownerId;
     private String accountName;
     @Field(targetType = FieldType.DECIMAL128)
