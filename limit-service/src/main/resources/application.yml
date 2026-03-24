@@ -3,7 +3,7 @@ spring:
     name: limit-service
   data:
     mongodb:
-      uri: ${MONGODB_URI:mongodb://admin:secret@localhost:27017/limitdb?authSource=admin}
+      uri: ${MONGODB_URI:mongodb://localhost:27017/familyaccountdb}
     redis:
       host: ${REDIS_HOST:localhost}
       port: ${REDIS_PORT:6379}

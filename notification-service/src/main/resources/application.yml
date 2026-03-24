@@ -3,7 +3,7 @@ spring:
     name: notification-service
   data:
     mongodb:
-      uri: ${MONGODB_URI:mongodb://admin:secret@localhost:27017/notificationdb?authSource=admin}
+      uri: ${MONGODB_URI:mongodb://localhost:27017/familyaccountdb}
   kafka:
     bootstrap-servers: ${KAFKA_SERVERS:localhost:9092}
     producer:
